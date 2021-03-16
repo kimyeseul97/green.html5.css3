@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /* 초기화 */
+    * {
+        margin: 0;
+        padding: 0;
+        color:var(--color-font-black);
+        font-family: var(--font-family);
+    }
+    
+    header{
+        border-top: solid 2px black;
+        background: var(--color-beige);
+        position: fixed;
+        top:0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header .head-wrap .head-wrap-inner .search-btn{
+        position: absolute;
+        top:10px;
+        right: 40px;
+        background: white;
+        border: solid 1px gray;
+        border-radius: 5px;
+        width:34px;
+        height: 34px;
+    }
+    
+    header .head-wrap .head-wrap-inner .search-btn img{
+        position: absolute;
+        top: 7px;
+        left: 7px;
+    }
+    
+    header .head-wrap{
+        border:var( --temp-border);
+        height: 120px;
+        width: 1100px;
+    }
+
+    header .head-wrap .head-wrap-inner{
+        height: 120px;
+        width: 1100px;
+        position: relative;
+        border:var( --temp-border);
+    }
+    
+    header .head-wrap .head-wrap-inner .head-logo{
+        position: absolute;
+        top:20px;
+        width:75px;
+        height:75px;
+    }
+    
+    header .head-wrap .head-wrap-inner .head-menu-top-nav{
+        position: absolute;
+        left:552px;
+        top:21px;
+    }
+    
+    header .head-wrap .head-wrap-inner .head-menu-top-nav ul{
+        list-style: none;
+    }
+    
+    header .head-wrap .head-wrap-inner .head-menu-top-nav ul li{
+        float: left;
+        color: var( --color-font-light-black);
+        font-size: 13px;
+        text-align: center;
+        height: 20px;
+        border:var( --temp-border);
+    }
+    header .head-wrap .head-wrap-inner .head-menu-top-nav ul li a{
+        text-decoration: none;
+    }
+    header .head-wrap .head-wrap-inner .head-menu-top-nav ul li a:hover{
+        text-decoration: underline;
+    }
+    header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav01
+    {
+        width:76px;
+    }
+    header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav02
+    {
+        width:106px;
+    }
+    header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav03
+    {
+        width:181px;
+    }
+    header .head-wrap .head-wrap-inner .head-menu-top-nav ul .top-nav04
+    {
+        width:97px;
+    }
+    header .head-wrap-sub{
+        position: absolute;
+        top:60px;
+        width: 1100px;
+        height: 66px;
+        border:var( --temp-border);
+    }
+    header .head-wrap-sub{
+        display: flex;
+        justify-content: flex-end;
+    }
+    header .head-wrap-sub ul{
+        list-style: none;
+        width: 737px;
+        display: flex;
+        justify-content:space-between; 
+        border:var( --temp-border);
+    }
+    header .head-wrap-sub ul li{
+        text-align: center;
+        flex: auto;    
+    }
+    header .head-wrap-sub ul li a{
+        text-decoration: none;
+        display: block;
+        border:var( --temp-border);
+        text-transform: uppercase;
+        font-size: 13px;
+        padding-top: 10px;
+        height: 66px;
+        } 
+    header .head-wrap-sub ul li a:hover{
+        text-decoration: underline;
+        background-color: #2c2a29;
+        color:var( --color-font-green);
+        }
+
+    .search-btn{
+        width:95px;
+        height:35px;
+        color:rgb(255, 255, 255);
+        border: 0;
+        border-radius: 4px;
+        background: rgb(254, 255, 196);
+        background: linear-gradient(162deg,#dddddd 0%, #cacaca 100%);
+    }
+
+    </style>
+</head>
+
+<body>    
+    <header>
+        <div class="head-wrap">
+            <div class="head-wrap-inner">
+                <img class="head-logo" src="img/logo.png">
+                <nav class="head-menu-top-nav">
+                    <ul>     
+                        <li class="top-nav01"><a href="#">Sign In</a></li>
+                        <li class="top-nav02"><a href="#">My Starbucks</a></li>
+                        <li class="top-nav03"><a href="#">Customer Service & Ideas</a></li>
+                        <li class="top-nav04"><a href="#">Find a Store</a></li>
+                    </ul>
+                 </nav>
+                 <div class="search-btn">
+                    <button class="search-btn">Login</button>
+                     <img src="img/icon_magnifier_black.png"> 
+                 </div>
+            </div>
+            <div class="head-wrap-sub">
+                <nav class="head-menu-main-nav">
+                    <ul>
+                        <li class="main-nav01"><a href="#">Coffee</a></li>
+                        <li class="main-nav02"><a href="#">Menu</a></li>
+                        <li class="main-nav03"><a href="#">Store</a></li>
+                        <li class="main-nav04"><a href="#">Responsibility</a></li>
+                        <li class="main-nav05"><a href="#">My Starbucks Rewards</a></li>
+                        <li class="main-nav06"><a href="#">What's New</a></li>
+                    </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+  
+
+
+    
+</body>
+</html>

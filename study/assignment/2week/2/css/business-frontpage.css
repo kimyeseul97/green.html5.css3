@@ -1,0 +1,19 @@
+/*!
+ * Start Bootstrap - Business Frontpage (https://startbootstrap.com/template/business-frontpage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.bg-primary {
+    background-color: #006e32!important;
+}
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #005f15;
+  border-color:  #005f15;
+}

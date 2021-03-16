@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자손선택자</title>
+    <style>
+        /* 후손은 말고 자손의 색깔만 지정 */
+        #header > h1 { color: red; }
+        #section > h1 { color: orange; }
+    </style>
+</head>
+<body>
+    <div id ="header">
+        <h1 class="title">안녕하세요</h1>
+        <div id="nav">
+            <h1>네비게이션</h1>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">반갑습니다</h1>
+        <p>감사합니다 잘 부탁드립니다요</p>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 만들기 과제 (회원가입창)</title>
+
+    <style>
+        
+        h1{
+            color: rgb(2, 87, 44);
+            text-align: left;  
+            font-weight: 1000 ;
+            }
+
+        table{
+            border-radius: 20px;
+            border-style: double;
+            border-color: rgb(248, 206, 152);
+            text-align: left;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>회원가입</h1>
+
+    <form>
+            <table>
+                <tr>
+                    <td><label for="name">이름</label></td>
+                    <td><input id="name" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                     <label>성별</label><br />
+                     <input type="radio" name="sex" checked />남
+                     <input type="radio" name="sex" />여<br />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="name">생년</label></td>
+                    <td><input id="name" type="text" /></td>
+                    <td><label for="name">월 </label></td>
+                    <td><input id="number", type="number" /></td>
+                    <td><label for="name">일 </label></td>
+                    <td><input id="name" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="name">아이디</label></td>
+                    <td><input id="name" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="name">비밀번호 </label></td>
+                    <td><input type="password" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="name">비밀번호 재확인</label></td>
+                    <td><input type="password" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="mail">본인 확인 이메일(선택)</label></td>
+                    <td><input id="mail", type="email" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="mail">휴대전화</label></td>
+                    <td><input id="phone", type="text" /></td>
+                </tr>      
+                <tr>
+                    <td><label for="name">인증번호를 입력하세요 </label><br />
+                    <input id="name" type="text" />
+                    <input type="button" value="인증번호받기" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>사이트를 알게된 경로</label><br />
+                        <input type="checkbox"checked/>인터넷서치<br />
+                        <input type="checkbox"/>지인소개<br />
+                        <input type="checkbox"/>SNS광고<br />
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="가입하기" />
+    </form>
+</body>
+</html>

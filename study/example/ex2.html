@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+</head>
+<body>
+    <style>
+        input[type=checkbox]:checked + div{
+            height: 0px;
+        }
+    div{
+        overflow: hidden;
+        width: 650px; height: 300px;
+
+        -ms-transition-duration:1s;
+        -webkit-transition-duration:1s;
+        -moz-transition-duration:1s;
+        transition-duration:1s;
+
+    }
+
+    h1{
+        color: rgb(26, 90, 71);
+        text-align: left; 
+        font-size: 50px;   
+    }
+
+    table{
+        border-radius: 20px;
+        border-style: dashed;
+        border-color:coral;
+        font-size: 30px;
+    }
+
+    </style>
+</head>
+<body>
+<input type="checkbox"/>
+
+    <h1>My page</h1>
+
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>생년월일</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>김예슬</td>
+            <td>1997년1월9일</td>
+            <td>인천광역시 남동구 간석동</td>
+        </tr>
+
+    </table>
+</body>
+</html>

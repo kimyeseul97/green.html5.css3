@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그와 자손 선택자 주의사항</title>
+
+    <!-- 테이블 작성시에 자손선택자는 사용하지 말자 -->
+    <style>
+        table > tr > td {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <table border="5">
+        <tr>
+            <th>이름</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>김예슬</td>
+            <td>인천광역시 남동구 간석동</td>
+        </tr>
+    </table>
+</body>
+</html>

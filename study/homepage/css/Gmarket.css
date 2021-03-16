@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* {
+    margin: 0; padding: 0;
+    font: normal 12px 'Dotum';
+}
+
+a{ text-decoration: none; }
+img { border: 0; }
+ul{ list-style: none; }
+
+body {
+    width: 980px;
+    /* 중앙정렬 margin 값 */
+    margin: 0 auto; 
+    min-width: 980px;
+}
+
+/* 헤더 */
+#main_header {
+    position: relative; 
+    height: 75px;
+}
+
+#main_header > h1.logo {
+    /* position: absolute; */
+    float: left;
+    margin-top: 25px;
+    left: 15px; top: 10px;
+}
+
+#main_header > div.login_menu {
+    position: absolute;
+    top: 140px; right: 0px;
+}
+
+
+/* 네비게이션1 */    
+#top_gnb {
+    overflow: hidden;
+}
+
+#top_gnb > div.menu {
+    float: left;
+    width: 140px; height: 50px;
+    background: url(/Images/top_gnb.png);
+}
+
+#top_gnb > div.item_1 { background-position: 0px 0px; }
+#top_gnb > div.item_2 { background-position: 0px -50px; }
+#top_gnb > div.item_3 { background-position: 0px -100px; }
+#top_gnb > div.item_4 { background-position: 0px -150px; }
+#top_gnb > div.item_5 { background-position: 0px -200px; }
+#top_gnb > div.item_6 { background-position: 0px -250px; }
+#top_gnb > div.item_7 { background-position: 0px -300px; }
+
+#top_gnb > div.item_1:hover { background-position: 0px -350px; }
+#top_gnb > div.item_2:hover { background-position: 0px -400px; }
+#top_gnb > div.item_3:hover { background-position: 0px -450px; }
+#top_gnb > div.item_4:hover { background-position: 0px -500px; }
+#top_gnb > div.item_5:hover { background-position: 0px -550px; }
+#top_gnb > div.item_6:hover { background-position: 0px -600px; }
+#top_gnb > div.item_7:hover { background-position: 0px -650px; }
+
+#top_gnb > div.item_1.active { background-position: 0px -350px; }
+#top_gnb > div.item_2.active { background-position: 0px -400px; }
+#top_gnb > div.item_3.active { background-position: 0px -450px; }
+#top_gnb > div.item_4.active { background-position: 0px -500px; }
+#top_gnb > div.item_5.active { background-position: 0px -550px; }
+#top_gnb > div.item_6.active { background-position: 0px -600px; }
+#top_gnb > div.item_7.active { background-position: 0px -650px; }
+
+/* 본문 */
+#content { margin-top: 10px;}
+
+/* 푸터 */
+#main_footer {
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background: #d4d4d4;
+    /* border-radius: 5px; */
+    text-align: left;
+}

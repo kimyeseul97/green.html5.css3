@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형태구조 선택자</title>
+    <style>
+        /* 형제관계중 첫번쨰로 등장하는 특정태그만! */
+        h1:first-of-type {color: red;}
+        h2:first-of-type {color: red;}
+        h3:first-of-type {color: red;}
+    </style>
+</head>
+<body>
+    <h1>1</h1>
+    <h1>2</h1>
+    <h3>3</h3>
+    <h3>4</h3>
+    <h2>5</h2>
+    <h1>6</h1>
+</body>
+</html>

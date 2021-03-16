@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태선택자</title>
+    <style>
+        /* input 태그 사용가능할경우 */
+        input:enabled{background-color: white; }
+        /* input 태그 사용불가능할경우 */
+        input:disabled{background-color: gray; }
+        /* input 태그애 초점이 맞춰진 경우에  */
+        input:focus{background-color: orange; }
+    </style>
+</head>
+<body>
+    <h2>Enabled</h2>
+    <input />
+    <h2>Disabled</h2>
+    <input disabled="disabled"/>
+</body>
+</html>
