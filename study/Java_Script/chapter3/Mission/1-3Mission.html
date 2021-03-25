@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중간시험</title>
+</head>
+<body>
+    <script>
+
+        var level = prompt("학년을 입력하세요","");
+        var score = prompt("점수를 입력하세요","");
+        var msg = "에러입니다";
+
+        if( 0 <= score && score <= 100) { //and기호사용
+
+            if(grade == 4 && score >= 70){
+                
+
+
+
+
+            if(level == 4) { //4학년일떄
+                 if(score>=70) {
+                     document.write("합격하셨습니다.");
+                }
+                else{
+                    document.write("불합격하셨습니다.");
+                }   
+
+        } else {
+         if(score >= 60){
+            document.write("합격");
+
+        } else {
+            document.write("불합격");
+        }
+     }
+
+     document.write(msg);
+
+    }else {
+        alert(msg);
+    }
+
+    </script>
+</body>
+</html>

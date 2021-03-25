@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function CheckWeight(name,height,weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+
+            this.getinfo = function() { //t생성 객체에 각 속성값을 출력하는 함수 등록
+                var str = ""
+                str += "이름:" + this.userName + ",";
+                str += "키:" + this.userHeight + ",";
+                str += "몸무게:" + this.userWeight +"<br>";
+                return str;
+            }
+
+            this.getResult = function() {
+                this.minWeight = (this.userHeight - 100)*0.9-5;
+                this.maxWeight = (this.userHeight - 100)*0.9+5;
+
+                if(this.minWeight >= this.minWeight 
+                && this.userWeight <= this.maxWeight ) {
+                    return "정상 몸무게 입니다";
+                } else if (this.userWeight < this.minWeight) {
+                    return "정상몸무게 보다 미달 입니다.";
+                } else {
+                    return "정상몸무게 보다 초과 입니다.";
+                }
+            }
+        }
+
+        var jang = new CheckWeight("장보리",168,62);
+        var park = new CheckWeight("박달재",180,88);
+        console.log(jang);
+        console.log(park);
+
+        document.write(jang.getinfo());
+        document.write(jang.getResult());
+
+    </script>
+</body>
+</html>

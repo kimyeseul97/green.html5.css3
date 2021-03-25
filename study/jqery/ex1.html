@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변이미지</title>
+    <style>
+        .img1 {
+            width: 100%; 
+            /* 가변이미지는 높이를 퍼센트단위로 주면된다. */
+        }
+
+        .img2 {
+            max-width: 50%; 
+            height: auto;
+            /* max-width는 이미지자체의 너비값 이상으로 넘어가지 않게 함 */
+        }
+
+    </style>
+</head>
+<body>
+    <img src="jump.png" class="img1">
+    <img src="jump.png" class="img2">
+</body>
+</html>

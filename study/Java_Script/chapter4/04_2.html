@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 객체만드는 방법 두가지 -->
+</head>
+<body>
+    <script>
+        var tv = new Object();
+        tv.color = "white";
+        tv.price = 30000;
+        tv.info = function() {
+            document.write("tv 색상: " + this.color, "<br>");
+            document.write("tv 가격: " + this.price, "<br>");
+        }
+        // this 같은 객체안에 속성을 가져오는거
+
+
+        // 변수선언방법
+        var car = {
+            color: "black",
+            price: 500000,
+            info: function(){
+                document.write("car 색상: " + this.color, "<br>");
+                document.write("car 가격: " + this.price, "<br>");
+            }
+        };
+        
+        document.write("<h1>tv객체 매서드 호출</h1>");
+        tv.info();
+    
+        document.write("<h1>car객체 매서드 호출</h1>");
+        car.info();
+
+    </script>
+</body>
+</html>
