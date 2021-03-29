@@ -3,27 +3,23 @@
 <head>
     <title>CSS3 Transition Basic</title>
     <style>
+        /* 초기화 코드 작성 */
         * { margin: 0; padding: 0; }
+        
         body { position: relative; }
+        
         #box {
             position: absolute;
             width: 200px; height: 200px;
             border-radius: 100px;
             text-align: center;
             background: linear-gradient(to bottom, #cb60b3, #db36a4);
-
-            animation-name: rint;
-            /* 지정 키프레임 적어주기 */
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            /* from에서 to로이동후 to에서 from으로 이동 */
-            animation-timing-function: linear;
         }
 
         #box > h1 {
             line-height: 200px;
         }
+
         @keyframes rint { 
             /* 키프레임 지정 */
             from {
@@ -41,9 +37,11 @@
         }
     </style>
 </head>
+
 <body>
     <div id="box">
         <h1>Rotation</h1>
     </div>
 </body>
+
 </html>

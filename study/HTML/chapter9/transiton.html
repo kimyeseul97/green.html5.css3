@@ -13,40 +13,52 @@
             background-color: orange;
             margin: 5px;
 
-            background-color: orange;
-            transition-duration: 5s;  /* 이벤트 발생시 애니메이션 지속 시간  */
+            transition-property: background-color,width;
+            transition-duration: 1s 5s;
+            /* 그래프에 마우스 올릴경우 3초동안 애니메이션 작동 */
         }
 
         #graph:hover > .bar {
             width: 600px;
         }
 
-        /* 몇초동안 기다린 후 애니메이션 작동할지 지정 */
-        .bar:nth-child(1) { 
-            transition-delay: 0s;    
-            /* 0초 뒤에 */
-            transition-timing-function: linear; 
-            /* 지정function : 애니메이션의 형태를 linear 그래프처럼 */
+        .bar:nth-child(1) {
+            transition-delay: 0s;
+            /*이벤트 발생 후 몇초동안 기다린후 애니메이션 작동 할지 지정 */
         }
-        .bar:nth-child(2) { 
+        .bar:nth-child(2) {
             transition-delay: 1s;
-            /* 1초뒤에 */
-            transition-timing-function: ease; 
         }
-        .bar:nth-child(3) { 
+        .bar:nth-child(3) {
             transition-delay: 2s;
-            /* 2초뒤에 */
-            transition-timing-function: ease-in; 
         }
-        .bar:nth-child(4) { 
+        .bar:nth-child(4) {
             transition-delay: 3s;
-            /* 3초뒤에 */
+        }
+        .bar:nth-child(5) {
+            transition-delay: 4s;
+        }
+
+        .bar:nth-child(1) {
+            transition-timing-function: linear;
+            /* 수치변형 함수지정-그래프모양에 따라 움직임 속도 지정 */
+        }
+        .bar:nth-child(2) {
+            transition-timing-function: ease;
+        }
+        .bar:nth-child(3) {
+            transition-timing-function: ease-in;
+        }
+        .bar:nth-child(4) {
             transition-timing-function: ease-in-out;
         }
-        .bar:nth-child(5) { 
-            transition-delay: 4s;
-            /* 4초뒤에 */
+        .bar:nth-child(4) {
             transition-timing-function: ease-out;
+        }
+
+        .bar:nth-child(1) {
+            transition-timing-function: cubic-bazier(0, 1, 1, 0);
+            /* cubic-bazier 지정 */
         }
 
         #graph:hover > .bar:nth-child(1) {
@@ -69,6 +81,8 @@
             background-color: pink;
             width: 400px;
         }
+
+
     </style>
 </head>
 <body>
