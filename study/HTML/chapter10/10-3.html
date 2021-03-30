@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3차원 변환함수</title>
+    <style>
+        body {
+            width: 200px;
+            margin: 200px;
+            -webkit-perspective: 400;
+            /* 원근법적용 */
+        }
+
+        section {
+            width: 100px; height: 200px;
+            position: relative;
+            animation: rint 3s linear 0s infinite;
+            
+            transform-style: preserve-3d;
+            /* 3d키워드적용 */
+        }
+
+        @keyframes rint {
+            from {
+                transform: rotateX( 0deg) rotateY( 0deg) rotateZ( 0deg);
+            }
+            to {
+                transform: rotateX( 360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+
+        div {
+            width: 200px; height: 200px;
+            position: absolute; left: 0; top: 0;
+            backface-visibility: visible;
+            /* 3차원 공간에서 평면의 후면을 보이거나 보이지 않게만드는 스타일 */
+            opacity: 0.3;
+        }
+
+        /* 옆면 */
+        div:nth-child(1){
+            transform: rotateY(  0deg) translate3d(0px, 0px, 100px);
+            background: red; 
+        }
+
+        div:nth-child(2){
+            transform: rotateY( 90deg) translate3d(0px, 0px, 100px); 
+            background: green;
+        }
+
+        div:nth-child(3){
+            transform: rotateY(180deg) translate3d(0px, 0px, 100px); 
+            background: blue;
+        }
+
+        div:nth-child(4){
+            transform: rotateY(270deg) translate3d(0px, 0px, 100px);
+            background: yellow;
+        }
+
+        /* 윗면과 아랫면 */
+        div:nth-child(5){
+            transform: rotateX( 90deg) translate3d(0px, 0px, 100px);
+            background: brown;
+        }
+        div:nth-child(6){
+            transform: rotateX(270deg) translate3d(0px, 0px, 100px);
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

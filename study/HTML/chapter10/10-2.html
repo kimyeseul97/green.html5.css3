@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2차원 변환함수</title>
+    <style>
+        section {
+            width: 100px; height: 100px;
+            border: 5px solid black;
+        }
+
+        div {
+            width: 100px; height: 100px;
+            background: red;
+
+            transform: rotate(60deg) scale(1.2) skewY(10deg);
+            /* 사각형 60도 회전 크기 1.2배 y축 방향으로 10도 기울어진 사각형*/
+            transform-origin: 100% 100%;
+            /* 객체 변환 중심 지정 */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>
+</body>
+</html>
