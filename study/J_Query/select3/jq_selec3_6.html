@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체조작및생성</title>
+    <script src="jquery-3.6.0.min.js"></script>
+<script>
+	$(function( ){
+		var w1 = $("#p1").height(); //요소의 높이값 반환
+		console.log(w1);
+
+		var w2 = $("#p1").innerHeight(); //여백포함 요소 높이값 반환
+		console.log(w2);
+
+		var w3 = $("#p1").outerHeight(); //여백과 선 두께 포함한 요소의 높이값
+		console.log(w3);
+
+		$("#p2")
+		.outerWidth(100)
+		.outerHeight(100);
+	});
+</script>
+<style>
+	*{padding: 0;}
+	#p1, #p2{
+		width: 100px;
+		height: 50px;
+		padding:20px;
+		border: 5px solid #000;
+		background-color: #ff0;
+	}
+</style>
+</head>
+<body>
+	<h1>수치 조작 메서드</h1>
+	<p id="p1">내용1</p>
+	<p id="p2">내용2</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체조작및생성</title>
+    <script src="jquery-3.6.0.min.js"></script>
+<script>
+	$(function( ){
+		var topNum = $("h1").offset().top; //문서기준 선택요소 위치 좌표값
+		$(window).scrollTop(topNum); //스크롤바가 수직으로 이동한 위치값
+
+		var sct = $(window).scrollTop();
+		console.log(sct);
+	});
+</script>
+<style>
+	*{margin:0;padding:0;}
+	body{line-height:1;}
+	#wrap{
+			height:5000px;
+			padding-top:2000px;
+	}
+</style>
+</head>
+<body>
+	<div id="wrap">
+			<h1>위치 메서드</h1>
+	</div>
+</body>
+</html>
