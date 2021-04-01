@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지</title>
+    <script src="jquery-1.10.2.min.js"></script>
+<script>
+$(function( ) {
+	$(document).ready(function(){ //로딩끝나면 이벤트 발생
+		var h1 = $(".img1").height();
+		console.log("ready :", h1); //ready=0
+	});
+
+	$(window).load(function(){	
+		var h2 = $(".img1").height();
+		console.log("load :", h2); //이미지 높이값 출력load=300
+	});   
+});
+</script>
+</head>
+<body>
+	<p>
+		<img src="http://place-hold.it/300X300" class="img1">
+	</p>
+</body>
+</html>

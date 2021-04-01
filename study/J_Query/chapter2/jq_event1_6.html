@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <script src="jquery-3.6.0.min.js"></script>
+<script>
+$(function( ) {
+	$(".btn1").on({
+		"mouseover" : function( ) { //버튼에 마우스 포인터 올리면 클래스 배경값이 노란색으로 변경
+			$(".txt1")
+			.css({"background-color":"yellow"});
+		},
+		"mouseout" : function( ) { //버튼에서 마우스 포인터가 벗어나면 배경의 색 다시 제거
+			$(".txt1")
+			.css({"background":"none"});
+		}
+	});
+
+	$(".btn2").hover(function( ) { 
+		$(".txt2")
+		.css({"background-color":"aqua"}); //마우스 오버시 실행
+	}, function(){
+		$(".txt2")
+		.css({"background":"none"}); //마우스 벗어나면 제거
+	});
+});
+</script>
+</head>
+<body>
+	<p><button class="btn1">Mouse Over/Mouse Out</button></p>
+	<p class="txt1">내용1</p>
+	<p><button class="btn2">Hover</button></p>
+	<p class="txt2">내용2</p>
+</body>
+</html>
