@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과와 애니메이션</title>
+    <script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function( {
+        $(".txt1")
+        .animate({marginLeft:"300px"},1000);
+
+        $(".txt2").delay(3000)
+        .animate({marginLeft:"300px"},1000);
+
+        $(".btn1").on("click",moveElement);
+
+        function moveElement( {
+            $(
