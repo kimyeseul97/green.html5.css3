@@ -12,33 +12,77 @@
     <header id="main_header">
         <div class="gnb_container">
             <div class="gnb">
+
                 <!-- 로고 -->
                 <div class="logo">
                     <a href="https://www.accuweather.com/"><img src="img/logo.svg" alt="로고"></a>
                 </div>
+
                 <!-- 메뉴바 -->
                 <ul class="nav">
-                    <li><a href="#" id="1">레이더 및 지도</a></li>
-                    <li><a href="#" id="2">동영상</a></li>
-                    <li><a href="#" id="3">악천후 기상</a></li>
+
+                    <li><a href="#" >레이더 및 지도</a></li>
+                        <div class="inner wrap_1">
+                            <li><a href="#" >레이더 및 지도</a></li>
+                                <span>과거와 현재, 미래의 기상 정보를 정지된 이미지 지도와 인터랙티브 지도로 다양한 각도에서 시각화합니다</span>
+                            <li><a href="#" >레이더</a></li>
+                                <span>지역의 강수량과 유형, 강도를 분석하는 현재와 미래의 레이더 지도</span>
+                            <li><a href="#" >위성</a></li>
+                                <span>구름양과 강수량을 시각화하는 위성 지도</span>
+                        </div>
+
+                    <li><a href="#" >동영상</a></li>
+                        <div class="inner wrap_2">
+                            <li><a href="#" >동영상</a></li>
+                                <span>주요 기상 사태에 대한 동영상 정보</span>
+                            <li><a href="#" >인기정보</a></li>
+                                <span>가장 정확한 날씨 정보를 동영상으로 만나 보세요</span>
+                            <li><a href="#" >전문가 예보</a></li>
+                                <span>최신 날씨 정보로 일상을 대비하세요</span>
+                            <li><a href="#" >스톤체어</a></li>
+                                <span>최고의 전문가들로 구성된 현장 팀이 악천후에 대비합니다</span>
+                        </div>
+
+                    <li><a href="#" >악천후 기상</a></li>
+                        <div class="inner wrap_3">
+                            <li><a href="#" >악천후기상</a></li>
+                            <li><a href="#" >허리케인</a></li>
+                            <span>허리케인 시즌을 대비하기 위해 필요한 모든 것</span>
+                        </div>
                 </ul>
+
                 <!-- 환경설정 버튼 -->
                 <div class="setting">
                     <a href="#"><i class="fas fa-cog fa-lg"></i></a>
                 </div>
+
                 <!-- 햄버거 메뉴바 -->
                 <div class="trigger">
                     <a href="#"><i class="fas fa-bars fa-lg"></i></a>
                 </div>
+
             </div>
         </div>
-
     </header>
 
+    <!-- 컨텐츠 -->
     <div id="main_content">
 
 
     </div>
 
+    <!-- 제이쿼리 연결 -->
+    <scrip src="js/jquery-3.6.0.min.js"></scrip>
+    <!-- 자바스크립트 연결 -->
+    <scrip src="js/main.js"></scrip>
+
+        <!-- <script>
+        $(".gnb_container > ul > div ").hover(function(){
+			$(".header .sub_bg").stop().slideDown(100);
+		})
+			$(".gnb_container > ul > div ").mouseleave(function(){
+			$(".header .sub_bg").stop().slideUp(200);
+		})		
+        </script> -->
 </body>
 </html>

@@ -1,0 +1,85 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: inherit;
+  }
+  
+  h1 {
+    margin: 0;
+    height:114px;
+    padding:0;
+  }
+  
+  h2 {
+  }
+  
+  h3 {
+    font-size: 2.92rem;
+  }
+
+  nav .brand-logo {
+    color: #fff;
+    display: block;
+   /*  font-size: 2.1rem; */
+    padding: 16px 0 0;
+    height:114px; 
+    line-height:11px;
+    white-space: nowrap;
+    text-align:center;
+    margin:0 auto;
+  }
+  
+  nav .brand-logo.center {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  
+
+@media only screen and (min-width: 1025px)
+nav {
+    min-height: 190px;
+}
+
+nav {
+    background: #fef100;
+}
+
+nav .nav-wrapper.container {
+    width:100% !important; 
+    padding:0;}
+}
+
+
+/* nav 메뉴 */
+#nav-pc {
+    color:#fff;
+    z-index: 999999999;
+}
+#nav-pc > ul {
+    width:96%; 
+    margin:0 auto; 
+    padding:130px 0 60px;
+    color:#fff; 
+    text-align:left;
+}
+#nav-pc > ul > li {
+    width:16.666%; 
+    float:left; 
+    clear:none;
+    color:#777;
+}
+#nav-pc > ul > li a {
+    color:#777; 
+    text-align:left;
+}
+#nav-pc > ul > li > h3,
+#nav-pc > ul > li > h3 a{
+    font-size:24px; 
+    text-align:left; 
+    height:50px; 
+    background:url('../images/common/bg_menuh3.png') no-repeat 20px top;
+}
