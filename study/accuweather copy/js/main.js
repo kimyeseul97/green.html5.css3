@@ -1,27 +1,22 @@
+/* 지도 */
+
+var map = new Map();
+map.getKakaoMap();
+
+/* 날씨 */
+
+var forecast = new Forecast();
+var cityList = ["seoul", "incheon", "busan", "gwangju", "jeju", "jeonju"];
+
+/* 중요!! 원래는 한번씩 호출하는것보다 한꺼번에 정보를 불러오는게 좋다.
+   백엔드 서버 접속은 최대한 자주 안할수록 좋음.
+   https://openweathermap.org/current 사이트에 여러지역을 한꺼번에 불러오는 방법도 있으므로 참고. 
+   우선 한지역만 불러오는 방식을 이용해 아래와 같이 코딩 */
+
 $(function(){
-    $(".nav").hover(function() {
-        var lnbShow = $(".lnb_container").is(":visible");
-
-        if (lnbShow) {  // 하위 메뉴가 보이면
-            $(".lnb_container").removeClass("appear");
-            $(".lnb_container").addClass("disappear");
-        } else {       // 하위 메뉴가 보이지 않으면
-            $(".lnb_container").removeClass("disappear");
-            $(".lnb_container").addClass("appear");
-        }
-
-        $(".lnb_container").toggle();   // block 혹은 none 처리
-        
-    });
-
-    $(".nav li").hover(function() {
-        $(".active_bar").toggle();
-
-        var listleft = $(this).offset().left;
-        var listWidth = $(this).width();
-
-        $(".active_bar").width(listwidth);
-        $(".active_bar").offset({left: listleft + 17});
-
-    })
+    $(".temp").each(function(i) {
+        $(this).text(forecast.getCurrentTemp(cityList[i]) + "℃");
+      });
 });
+
+

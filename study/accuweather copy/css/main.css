@@ -1,169 +1,131 @@
 @charset "UTF-8";
 
-/* 초기화 */
-* {
-    margin: 0; padding: 0;
-    font: normal 13px 'Arial';
-}
-a { text-decoration: none !important; }
-img { border: 0; }
-ul { list-style: none; }
-
-/* 헤더 */
-
-#main_header {
-    background: gray;
-    color: white;
-    height: 390px;
-}
-
-#main_header a {
-    color: white;
-}
-
-#main_header > .gnb_container {
-    background: black;
-    height: 60px;
-    position: fixed;
-    width: 100%;
-}
-
-#main_header .gnb {
-    overflow: hidden;
-    margin: 0 auto;
-    /* padding-top: 10px; */
-}
-
-#main_header .logo {
-    float: left;
-    width: 190px;
-}
-
-#main_header ul {
-    float: left;
-    overflow: hidden;
-    /* padding-top: 12px; */
-    padding-left: 10px;
-    width: calc(100% - 217px);
-}
-
-#main_header ul > li {
-    float: left;
-    /* margin-right: 1rem; */
-    padding: 22px 17px;
-}
-
-#main_header .setting {
-    float: right;
-    width: 17px;
-    text-align:right;
-    padding-top: 12px;
-}
-
-#main_header .trigger {
-    float: right;
-    width: 23px;
-    text-align: right;
-    padding-top: 4px;
-    display: none;
-}
-
-/*trg하위메뉴*/
-#main_header > .trigger_container {
-    display: none;
-    background: black;
-    height: 330px;
-    width: 100%;
-    position: fixed;
-    top:61px;
-}
-
-
-
-/*lnb하위메뉴*/
-
-#main_header > .lnb_container {
-    display: none;
-    background: black;
-    height: 330px;
-    width: 100%;
-    position: fixed;
-    top:61px;
-}
-
-#main_header > .lnb_container > .lnb {
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-#main_header > .lnb_container > .lnb > div {
-    float: left;
-}
-
-/*메뉴 애니매이션*/
-
-.appear {
-    animation: fade-in 0.5s;
-}
-
-.disappear {
-    animation: fade-out 0.5s;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-/* 콘텐츠 */
-
+/* 메인 콘텐츠 */
 #main_content {
-    height: 1000px;  /* 콘텐츠 스크롤 만들어 지도록*/ 
+    background: #D8D8D8;
+}
+
+#main_content > div {
+    width: 960px; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 메인 section 공통 */
+
+#main_content > #main_container > section {
+    width: 730px;
+    float: left;
+}
+
+/* 메인 article 공통 */
+
+#main_content > #main_container > section > article {
+    width: 90%;
+}
+
+/* 메인 지도(기상레이더) */
+
+#main_content > #main_container > section > #weather_map {
+    height: 400px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+#main_content > #main_container > section > #weather_map > #map {
+    width: 90%;
+    height: 360px;
+    z-index: 0 !important; /* 지도 index 반드시 강제 지정해줘야 함 */
+    margin: 0 auto;
+}
+
+/* 메인 날씨(기상 상태) */
+
+#main_content > #main_container > section > #weather_loacation {
+    height: 400px;
+    margin-bottom: 20px;
+    background: #D8D8D8
+}
+
+#main_content > #main_container > section > #weather_loacation a {
+    display: inline-block;
+    width: calc(50% - 8px);  /* 각각의 a태그에 좌우로 2px씩 margin값이 있기 때문에 8px를 빼준다 */
+    height: 51px;
+    background: white;
+    margin: 2px;
+}
+
+#main_content > #main_container > section > #weather_loacation a span {
+    display: inline-block;
+    font-size: 18px;
+}
+
+#main_content > #main_container > section > #weather_loacation a span:nth-child(1) {
+    width: 60%;
+}
+
+#main_content > #main_container > section > #weather_loacation a span:nth-child(2) {
+    width: 20%;
+}
+
+#main_content > #main_container > section > #weather_loacation a span:nth-child(3) {
+    width: 15%;
+}
+
+#main_content > #main_container > section > #weather_loacation a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 메인 추가기상 예보 */
+
+#main_content > #main_container > section > #weather_add {
+    height: 50px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+/* 메인 aside 공통 */
+
+#main_content > #main_container > aside {
+    width: 210px;
+    float: right;
 }
 
 /* 미디어 쿼리 */
 
 @media screen and (max-width: 767px) {
-    #main_header .gnb, .lnb {
-        width: 90vw;
+    #main_content > div {
+        width: 100%; 
     }
 
-    #main_header ul { 
-        display: none;
+    #main_content > #main_container > section {
+        width: 100%;
     }
 
-    #main_header .setting {
-        display: none;
+    #main_content > #main_container > section > article {
+        width: 100%;
     }
 
-    #main_header .trigger {
-        display: block;
+    #main_content > #main_container > section > #weather_loacation a {
+        width: 100%;
+    }
+
+    #main_content > #main_container > aside {
+        float: none;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    #main_header .gnb, .lnb {
-        width: 90vw;
+    #main_content > div {
+        width: 100%; 
+    }
+
+    #main_content > #main_container > section {
+        width: calc(100% - 210px);
     }
 }
 
 @media screen and (min-width: 1024px) {
-    #main_header .gnb, .lnb {
-        width: 960px;
-    }
+
 }
-
-

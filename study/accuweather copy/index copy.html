@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="library/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="css/common copy.css">
+    <link rel="stylesheet" href="css/main copy.css">
+</head>
+<body>
+    <header id="main_header">
+        <div class="gnb_container">
+                <div class="logo">
+                    <a href="#"><img src="img copy/logo.svg" alt="로고"></a>
+                </div>
+                <ul class="nav">
+                    <li><a href="#">레이더 및 지도</a></li>
+                    <li><a href="#">동영상</a></li>
+                    <li><a href="#">악천후 기상</a></li>
+                    <li><a href="#">개인화된 예보</a></li>
+                    <li><a href="#">설정</a></li>
+                </ul>
+                <div class="setting">
+                    <a href="#"><i class="fas fa-cog fa-lg"></i></a>
+                </div>
+                <div class="trigger">
+                    <a href="#" class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></a>
+                    <a href="#" class="mobile close"><i class="fas fa-times fa-lg"></i></a>
+                </div>
+            </div>
+            <!-- 검색창 -->
+                <div class="search">
+                    <input type="text" placeholder="위치찾기">
+                  </div>
+        </div>
+
+        <div class="active_path">
+            <div class="active_bar"></div>
+        </div>
+
+        <div class="lnb_container">
+            <div class="lnb">
+                <div class="mega_menu">
+                        <h3>레이더 및 지도</h3>
+                            <br></br>
+                        <p>과거와 현재, 미래의 기상 정보를 정지된 이미지 지도와 인터랙티브 지도로 다양한 각도에서 시각화합니다</p>
+                    </div>
+                <div class="medium_menu">
+                    <h4>레이더</h4>
+                        <br></br>
+                    <p>지역의 강수량과 유형, 강도를 분석하는 현재와 미래의 레이더 지도</p>
+                </div>
+                <div class="small_menu">
+                    <h4>위성</h4>
+                        <br></br>
+                    <p>구름양과 강수량을 시각화하는 위성 지도</p>
+                </div>
+                <div class="map_menu">
+                    <a href="#"><img src="img copy/map.jpg" alt="지도그림">
+                    <br></br>
+                    <p>대한민국 기상레이더</p>
+                    <p>강수량과 유형, 강도를 분석하는 현재와 미래의 레이더 지도</p>
+                    </a>
+                </div>
+            </div>
+            <div class="lnb">
+                <div class="mega_menu">
+                    <h3>동영상</h3>
+                    <br></br>
+                    <p>주요 기상 사태에 대한 동영상 정보</p>
+                </div>
+                <div class="medium_menu">
+                    <h4>인기정보</h4>
+                        <br></br>
+                    <p>가장 정확한 날씨 정보를 동영상으로 만나 보세요</p>
+                        <br></br>
+                        <br></br>
+                    <h4>전문가예보</h4>
+                        <br></br>
+                    <p>최신 날씨 정보로 일상을 대비하세요</p>
+                </div>
+                <div class="small_menu">
+                    <h4>스톰 체이서</h4>
+                        <br></br>
+                    <p>최고의 전문가들로 구성된 현장 팀이 악천후에 대비합니다</p>
+                </div>
+            </div>
+            <div class="lnb">
+                <div class="mega_menu">
+                    <h3>악천후 기상</h3>
+                </div>
+                <div class="medium_menu">
+                <h4>허리케인</h4>
+                    <br></br>
+                <p>허리케인 시즌을 대비하기 위해 필요한 모든 것</p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div id="main_content">
+        <div id="main_top">
+            <article>
+                <div>
+                    <img src="https://via.placeholder.com/960x250.png" alt="광고">
+                </div>
+            </article>
+        </div>
+        <div id="main_container">
+            <section id="main_section">
+                <article id="weather_map">
+                    <h5>대한민국 기상 레이더</h5>
+                    <div id="map"></div>
+                    <a href="#" style="color:rgba(255, 102, 0, 0.952)">추가지도</a>
+                </article>
+
+                <article id="weather_loacation">
+                    <h5>대한민국 기상 상태</h5>
+                    <div id="forecast">
+                        <a href="#">
+                            <span class="q">서울특별시</span>
+                            <span class="icon_weather"><img src="img copy/weather/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">부산광역시</span>
+                            <span class="icon_weather"><img src="img copy/weather/svg/009-wind-1.svg" alt="바람"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">광주광역시</span>
+                            <span class="icon_weather"><img src="img copy/weather/svg/010-raining.svg" alt="비"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">제주시</span>
+                            <span class="icon_weather"><img src="img copy/weather/svg/015-cloud.svg" alt="흐림"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">전주시</span>
+                            <span class="icon_weather"><img src="img copy/weather/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article id="weather_add">
+                    <div id="add">
+                        <a href="#">추가 기상 예보 대한민국개</a>
+                    </div>
+                </article>
+            </section>
+            <aside id="main_aside">
+                <div>
+                    <img src="https://via.placeholder.com/210x400.png" alt="광고">
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/210x400.png" alt="광고">
+                </div>
+            </aside>
+        </div>
+    </div>
+    <div id="mobile_menu">
+        <!-- 모바일 메뉴 리스트 -->
+    </div>
+    <footer id="main_footer">
+        <p>© 2021 AccuWeather, Inc. "AccuWeather" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved.</p>
+        <a href="#">이용 약관 | 개인정보 보호정책 | 쿠키 사용 정책 | TAG 공개</a>
+    </footer>
+<!-- 함수의 호이스트가 안되는 경우도 있으므로 js 파일은 순서가 중요하다.-->
+<!-- 라이브러리 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1bfb9e0a17abc783a36e7957860e2f95"></script>
+<script src="js/jquery-3.6.0.min.js"></script>   
+<!-- 아큐웨더 -->
+<script src="js/map.js"></script> 
+<script src="js/responsive.js"></script>
+<script src="js/forecast.js"></script>
+<script src="js/main.js"></script> 
+</body>
+</html>

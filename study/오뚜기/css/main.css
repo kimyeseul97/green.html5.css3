@@ -146,7 +146,7 @@ ul {
     display: none;
     background: rgb(255, 255, 255);
     position: relative;
-    top:0px;
+    top:230px;
     width: 120%;
 }
 
@@ -245,7 +245,49 @@ ul {
     margin:auto 0;    
     height: 250px;
     width: 100%;
+    display: block;
 }
+
+.section {
+    padding: 0 20px ;
+    width: 100%;
+}
+
+.section .contaier div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding-top: 100px;
+}
+
+
+.container_2 {
+    margin-top: 40px;
+}
+
+.container_2 .news h3 {
+    float: left;
+    width: 25%;
+    font-size: 30px;
+    margin: 0;
+    color: #333;
+}
+
+.container_3 {
+    margin-top: 80px;
+}
+
+.container_3 .event {
+    float: left;
+    width: 25%;
+    font-size: 30px;
+    margin: 0;
+    color: #333;
+}
+
 
 
 

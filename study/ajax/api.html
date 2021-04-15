@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+    <script>
+
+        $(function(){
+            var url = "http://api.openweathermap.org/data/2.5/weather";
+                url += "?q=" + "incheon";
+                url += "&units="+"metric";
+                url += "&lang="+"kr";
+                url += "&APPID="+"e22d0c5998d33d1993a4a74eb94e5b41";
+
+                console.log("url" + url);
+
+        $.ajax({
+            type:"GET",
+            url: url,
+            dataType:"json",
+            success:function(data) {
+                console.log("data"+data);
+                console.log(JSON.stringify(data)); //텍스트 형태로 변환
+                console.log("현재온도:"+data.main.temp);
+                console.log("현재품속:"+data.wind.speed);
+            },
+            error:function(request,status,error) {
+                console.log("code:"+request.status);
+                console.log("message:"+request.responseText);
+                console.log("error:"+error);
+            }
+        });
+    });
+
+    </script>
+</body>
+</html>
