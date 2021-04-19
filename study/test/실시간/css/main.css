@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {
+    margin: 0 auto;
+    box-sizing: inherit;
+}
+
+/* 풀스크린 배경 */
+.bg {
+    min-width: 1024px;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 60%;
+}
+
+/* 햄버거바 아이콘 */
+#content .trigger a{
+    float: right;
+    text-align:right;
+    padding-top: 12px;
+    padding-right: 10px;
+    font-size: x-large;
+}
+
+/* 메인제목 */
+#content h1{
+    font-size:100px; 
+    text-align:center;
+    color: cornsilk;
+    font-style:italic;				
+    text-shadow:2px 2px 3px rgb(138, 137, 137), 2px 2px 3px rgb(212, 212, 212);
+    /* 홈페이지 가운데 정렬 */
+    position:absolute;
+    top: 40%;
+    left:50%;
+    transform:translate(-50%, -50%)
+}
+
+/* 중간 글 */
+#content p{
+    font-size:25px; 
+    text-align:center;
+    color: cornsilk;
+    font-style:italic;				
+    text-shadow:2px 2px 3px rgb(138, 137, 137), 2px 2px 3px rgb(212, 212, 212);
+    /* 홈페이지 가운데 정렬 */
+    position:absolute;
+    top: 49%;
+    left:50%;
+    transform:translate(-50%, -50%)
+}
+
+/* 시계*/
+#clock{
+    color:cornsilk;
+    font-size:60px; 
+    text-align:center;
+    font-style:italic;			
+    text-shadow:2px 2px 3px rgb(133, 131, 131), 2px 2px 3px rgb(212, 212, 212);	
+    /* 홈페이지 가운데 정렬 */
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%, -50%)
+}
+
+
+@media screen and (max-width:1024px) {
+    .bg {
+        left: 50%;
+        margin-left: -512px;
+    }
+}

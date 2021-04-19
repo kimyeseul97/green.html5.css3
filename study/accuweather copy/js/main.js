@@ -17,6 +17,13 @@ $(function(){
     $(".temp").each(function(i) {
         $(this).text(forecast.getCurrentTemp(cityList[i]) + "℃");
       });
-});
 
-
+    // 다른 페이지 이동경로 지정
+    $(".location").on({
+      "click" : function() {
+            var q = $(this).childrem(".q").attr("id"));
+            var redirectURL = "pages/weather_location.html?q="+ q;
+            location.href = redirectURL;
+          }
+      });
+    });

@@ -26,6 +26,11 @@ input {
     border-radius: 5px;
     font-size: 17px;
 }
+.fa-search {
+    position: relative;
+    margin: 0 auto;
+    left: 180px;
+}
 
 
 /* 헤더 */
@@ -241,7 +246,11 @@ input {
 
 #main_footer {
     background: white;
-    height: 150px;
+    height: 100px;
+    text-align: center;
+    line-height: 1.85;    
+    padding: 70px 12px 24px 12px;
+    color: #878787;
 }
 
 /* 모바일 메뉴 */
