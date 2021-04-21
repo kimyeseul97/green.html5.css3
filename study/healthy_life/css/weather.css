@@ -24,14 +24,20 @@
     font-size:100px; 
     text-align:center;
     color: cornsilk;
-    font-style:italic;				
+    /* font-style:italic;				 */
     text-shadow:2px 2px 3px rgb(138, 137, 137), 2px 2px 3px rgb(212, 212, 212);
     /* 홈페이지 가운데 정렬 */
     position:absolute;
     top: 40%;
     left:50%;
     transform:translate(-50%, -50%)
+}
 
+/* 로고 */
+.gnb .logo {
+  margin-top: 15px;
+  float: left;
+  width: 190px;
 }
 
 /* 시계*/
@@ -39,7 +45,7 @@
     color:cornsilk;
     font-size:60px; 
     text-align:center;
-    font-style:italic;			
+    /* font-style:italic;			 */
     text-shadow:2px 2px 3px rgb(133, 131, 131), 2px 2px 3px rgb(212, 212, 212);	
     /* 홈페이지 가운데 정렬 */
     position:absolute;

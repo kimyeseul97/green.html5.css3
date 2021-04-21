@@ -10,14 +10,14 @@
 
 .gnb ul {
     overflow: hidden;
-    float: left;
+    float: right;
     padding-top: 10px;
     padding-left: 10px;
     width: calc(100% - 217px);
 }
 
 .gnb ul > li {
-    float: left;
+    float: right;
     padding: 8px 15px;
     overflow: hidden;
     font-size: 18px;
