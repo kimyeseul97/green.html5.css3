@@ -10,6 +10,19 @@ $(document).ready(function(){
         '13' : 'far fa-snowflake',
         '50' : 'fas fa-smog'
     };
+
+    // $function(){
+    // if(weatherIcon === '01') {
+    // } else if(weatherIcon === '02') {
+    // } else if(weatherIcon === '03') {
+    // } else if(weatherIcon === '04') {
+    // } else if(weatherIcon === '09') {
+    // } else if(weatherIcon === '10') {
+    // } else if(weatherIcon === '11') {
+    // } else if(weatherIcon === '13') {
+    // } else if(weatherIcon === '50') {
+    // }
+    // });
  
     $.ajax({
         url: 'http://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=e22d0c5998d33d1993a4a74eb94e5b41&units=metric',
