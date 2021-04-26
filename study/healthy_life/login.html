@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<title>메뉴3 bmi</title>
+<title>join</title>
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/login.css">
 <link rel="stylesheet" href="library/fontawesome-free-5.15.3-web/css/all.min.css">
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
 </head>
 
 <body>
 	<header>
 			<div class="gnb">
                 <div class="logo">
-                    <a href="#"><h2>healthylife</h2></a>
+                    <a href="main.html"><h2>healthylife</h2></a>
                 </div>
                 <ul class="nav">
 					<li><a href="join.html">가입</a></li>
@@ -24,42 +26,62 @@
                 </ul>
             </div>
         </div>
-
-        <div class="page-container">
-            <div class="login-form-container shadow">
-                <div class="login-form-right-side">
-                    <div class="top-logo-wrap">
+    </header>
+    
+        <div class="container">
+            <div class="login_container">
+                <!-- 오른쪽부분 -->
+                <div class="login_right">
+                    <div class="top_logo">
                     </div>
-                    <h1>How does a login system work?</h1>
-                    <p>In computer security, logging in is the process by which an individual gains access to a computer system by identifying and authenticating themselves.</p>
+                    <h1>Login</h1>
+                    <p>welcome</p>
                 </div>
-                <div class="login-form-left-side">
-                    <div class="login-top-wrap">
-                        <span>Don't have an account?</span>
-                        <button class="create-account-btn shadow-light">회원가입</button>
-                    </div>
-                    <div class="login-input-container">
-                        <div class="login-input-wrap input-id">
+                <!-- 왼쪽부분 -->
+                <div class="login_left">
+                    <div class="login_input_container">
+                        <div class="login_input_wrap">
                             <i class="far fa-envelope"></i>
                             <input placeholder="Email" type="text">
                         </div>
-                        <div class="login-input-wrap input-password">
+                        <div class="login_input_wrap">
                             <i class="fas fa-key"></i>
-                            <input placeholder="Password"  type="password">
+                            <input placeholder="Password" type="password">
                         </div>
                     </div>
-                    <div class="login-btn-wrap">
-                        <button class="login-btn">Login</button>
-                        <a href="#" >비밀번호 찾기</a>
+
+                    <div class="login_btn_wrap">
+                        <button class="login_btn">Login</button>
+                        </br>
+                        <a id="kakao-login-btn"></a>
+                        <a href="http://developers.kakao.com/logout"></a>
                     </div>
                 </div>
             </div>
         </div>
 
+
+<!-- 카카오 연동 로그인 -->
+    <script type='text/javascript'>
+            //<![CDATA[
+           // 사용할 앱의 JavaScript 키를 설정해 주세요.
+           Kakao.init('e3aaa61ff244ea2fcdf3b04a2c799db6');
+           
+           // 카카오 로그인 버튼을 생성합니다.
+           Kakao.Auth.createLoginButton({
+             container: '#kakao-login-btn',
+             success: function(authObj) {
+            alert(JSON.stringify(authObj));
+             },
+             fail: function(err) {
+             alert(JSON.stringify(err));
+             }
+           });
+            //
+    </script>
+
 	<!--js 파일-->
 	<script src="js/jquery-3.6.0.min.js"></script>
-
-
 </body>
 </html>
 

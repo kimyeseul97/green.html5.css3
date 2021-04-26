@@ -1,7 +1,6 @@
 function printClock() {
-    
-    var clock = document.getElementById("clock");            // 출력할 장소 선택
-    var currentDate = new Date();                                     // 현재시간
+    var clock = document.getElementById("clock");      // 출력할 장소 선택
+    var currentDate = new Date();                      // 현재시간
     var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1) + "-" + currentDate.getDate() // 현재 날짜
     var amPm = 'AM'; // 초기값 AM
     var currentHours = addZeros(currentDate.getHours(),2); 
@@ -12,10 +11,7 @@ function printClock() {
     	amPm = 'PM';
     	currentHours = addZeros(currentHours - 12,2);
     }
-
-    if(currentSeconds >= 50){// 50초 이상일 때 색을 변환해 준다.
-       currentSeconds = '<span style="color:#de1951;">'+currentSeconds+'</span>'
-    }
+    
     clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
     
     setTimeout("printClock()",1000); // 1초마다 printClock() 함수 호출

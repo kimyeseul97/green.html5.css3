@@ -1,9 +1,10 @@
 @charset "utf-8";
 
-/* 초기화 */
-* {
-    margin: 0 auto;
-    box-sizing: inherit;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
 }
 
 /* 풀스크린 배경 */
@@ -44,6 +45,13 @@
     top:55%;
     left:50%;
     transform:translate(-50%, -50%);
+}
+
+.footer {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 1024px;
+    margin: 0 auto;
 }
 
 
