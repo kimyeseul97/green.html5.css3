@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.mapBox {
+  margin-top: 50px;
+}
+
+.map_wrap  .map_open a i {
+  color: rgb(106, 121, 255);
+  font-size: 40px;
+  position: relative;
+  float: left;
+  margin-left: 5px;
+}
+
+.map_wrap  .map_close a i {
+  color: rgb(106, 121, 255);
+  font-size: 40px;
+  position: relative;
+  float: left;
+  margin-left: 10px;
+}
+
+.map_wrap #menu_wrap {
+  height: 400px;
+  width: 300px;
+  margin-top: 50px;
+}
+
+ /* 푸터 박스 */
+ .footer {
+  margin-top: 50px;
+}
+
+ /* 창크기조절 */
+
+ /* 스마트폰 */
+/* 창크기 최대 680이하일떄 */
+@media screen and (max-width:680px) {
+  .mapBox {
+    margin: auto;
+    width: auto;
+  }
+  .map_wrap {
+    width: auto;
+    height: auto;
+  }
+  .map_wrap #menu_wrap {
+    height: 200px;
+    width: 270px;
+    display: none;
+    margin-top: 50px;
+  }
+}
+
+/* 태블릿 */
+/* 690이상 1024이하*/
+@media screen and (min-width:680px) and (max-width:1150px) {
+  .mapBox {
+    margin: auto;
+    width: auto;
+  }
+  .map_wrap {
+    width: auto;
+    height: auto;
+  }
+  .map_wrap  .map_open {
+    display: none;
+  }
+  .map_wrap .map_close {
+    display: none;
+  }
+}
+
+/* 690이상 1024이하*/
+@media screen and (min-width:1150px){
+  .map_wrap  .map_open {
+    display: none;
+  }
+  .map_wrap  .map_close {
+    display: none;
+  }
+}
+

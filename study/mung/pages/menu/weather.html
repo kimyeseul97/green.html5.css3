@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>메뉴1 weather</title>
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/weather.css">
+<link rel="stylesheet" href="../../library/fontawesome-free-5.15.3-web/css/all.min.css">
+<link rel="stylesheet" href="../../library/bxslider-4-4.2.12/dist/jquery.bxslider.min.css">
+<link rel="stylesheet" href="../../library/bootstrap-3.3.2-dist/css/bootstrap.min.css">
+</head>
+</html>
+	<body>
+		<header>
+				<div class="gnb">
+					<div class="logo">
+						<a href="../../index.html"><h2><i class="fas fa-dumbbell"></i> healthylife</h2></a>
+					</div>
+					<div class="menu">
+						<div class="trigger">
+							<a href="#"><i class="fas fa-bars"></i></a>
+						</div>
+							<ul class="ham_box">
+								<li><a href="../../pages/login/join.html">가입</a></li>
+								<li><a href="../../pages/login/login.html">로그인</a></li>
+								<li><a href="../../pages/menu/bmi.html">self건강진단</a></li>
+								<li><a href="../../pages/menu/map.html">장소검색</a></li>
+								<li><a href="../../pages/menu/weather.html">운동날씨</a></li>
+								<li class="exit">
+									<a href="#"><i class="far fa-times-circle" style="color: rgb(15, 15, 15); padding-left: 10px;"></i></a>
+								</li>
+							</ul>
+						</div>
+					<ul class="nav">
+						<li><a href="../../pages/login/join.html">가입</a></li>
+						<li><a href="../../pages/login/login.html">로그인</a></li>
+						<li><a href="../../pages/menu/bmi.html">self 건강진단</a></li>
+						<li><a href="../../pages/menu/map.html">장소검색</a></li>
+						<li><a href="../../pages/menu/weather.html">운동날씨</a></li>
+					</ul>
+				</div>
+		</header>
+
+        <div id="container">
+            <h2>Todays weather</h2>
+            <!-- <p>What kind of exercise do you want to do?</p> -->
+        </div>
+		</br>
+			<h3 style="text-align: center; font-size: 30px; font-weight: lighter;">Recommended exercise of the day</h3>
+		</br>	
+
+<div id="contents">
+	<div class="weatherBox">
+		<h1>오늘의 날씨</h1>
+		<!-- 도시이름 출력 영역 -->
+		<h2 class="city"></h2>
+		<h3 class="weater"></h3>
+
+		<section class="subWeatherBox">
+			<!-- 날씨와 아이콘 출력 영역 -->
+			<!-- <p class="weater"></p> -->
+			<figure class="icon"></figure>
+			<!-- <div class="weather"></div> -->
+			
+			<!-- 온도 출력 영역 -->
+			<aside class="temperature">
+				<h2 class="temp"></h2>
+				<h2 class="temp_max">max</h2>
+				<h2 class="temp_min">min</h2>
+			</aside>
+		</section>	
+	</div>		
+		
+	<!-- 사진 출력 영역 -->
+		<section class="imgBox">
+			<!-- 비올때 -->
+		</br>
+			<h2>오늘의 추천운동</h2>
+		</br>
+			<div id="rain">
+				<img src="../../images/yoga.jpg" alt="요가" >
+				<img src="../../images/runningmachine.jpg" alt="런닝머신" >
+				<img src="../../images/swim.jpg" alt="수영" >
+				<img src="../../images/trainning.jpg" alt="홈트" >
+			</div>
+
+			<!-- 맑을때 -->
+			<div id="sun">
+				<img src="../../images/golf.jpg" alt="골프" >
+				<img src="../../images/tracking.jpg" alt="트레킹">
+				<img src="../../images/hiking.jpg" alt="등산">
+				<img src="../../images/run.jpeg" alt="달리기">
+			</div>
+		</section>
+</div>
+
+	<footer class="footer">
+		<p>© 2021 Healthylife by kimyeseul</p>
+	</footer>
+
+
+	<!-- jquery 사용을 위한 설정 -->
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+	<script src="../../library/bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+	<script src="../../library/bxslider-4-4.2.12/dist/jquery.bxslider.js"></script>
+	<!-- 사용자 정의 스크립트 사용을 위한 설정 -->
+	<script src="../../js/weather.js"></script>
+	<script src="../../js/common.js"></script>
+</body>
+</html>
