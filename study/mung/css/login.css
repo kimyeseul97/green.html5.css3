@@ -88,22 +88,26 @@
     .login_input_container .login_input_wrap ::-webkit-input-placeholder {
         color:rgb(180, 180, 180);
     }
-
-    .login_btn_wrap{
+    .login-btn-wrap{
         margin-top: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .login_btn_wrap .login_btn{
-        width:220px;
-        height:40px;
+    .login-btn-wrap .login-btn{
+        width:95px;
+        height:35px;
         color:rgb(255, 255, 255);
         border: 0;
         border-radius: 4px;
         background: rgb(254, 255, 196);
         background: linear-gradient(162deg,#dddddd 0%, #cacaca 100%);
+    }
+    .login-btn-wrap a{
+        margin-top:10px;
+        text-decoration: none;
+        font-size: 11px;
+        color: gray;
     }
 
 

@@ -33,7 +33,7 @@
 					<li><a href="../login/join.html">JOIN</a></li>
 					<li><a href="../login/login.html">LOGIN</a></li>
 				</ul>
-		<!-- 모바일메뉴 -->
+							<!-- 모바일메뉴 -->
 			<!-- <div class="menu">
 				<div class="trigger">
 					<a href="#"><i class="fas fa-bars"></i></a>
@@ -54,38 +54,57 @@
             <h4>강아지 정보들을 영상으로 확인해 보세요</h4>
         </div>
     
-    	<div class="contents">
-<!-- 리스트 게시판 시작-->
 
-<caption>게시판 리스트</caption>
-<h2>게시글 리스트</h2>
-<table border='1'>
-	<colgroup>
-		<col width='60'><col width='200'><col width='100'>
-	</colgroup>
-	<thead>
-		<tr>
-			<th>글번호</th>
-			<th>글제목</th>
-			<th>작성자</th>
-		</tr>
-	</thead>
-</table boader='1'>
-<button onclick="location.href='../write'">글쓰기</button>
+<div class="contents">
+<h2>게시글 작성</h2>
+<form id='form' method='post' accept-charset="utf-8">
+	작성자 : <input type='text' name='id'><br>
+	제목 : <input type='text' name='title'><br>
+	내용 : <textarea name='content'></textarea><br>
+	<button id='submit'>글쓰기</button>
+</form>
+</div>
 
 		<footer class="footer">
-            <p>© 2021 Healthylife by kimyeseul</p>
+            <p>© 2021 Mung by kimyeseul</p>
         </footer>
 
 	<!--js 파일-->
 	<script src="../../js/jquery-3.6.0.min.js"></script>
-    <!-- bmi 계산 js -->
-    <script src="../../js/bmi.js"></script> 
+	<script src="../../js/common.js"></script>
 
-    <!-- chart.js 라이브러리 이용  -->
-    <script src="../../js/chart.min.js"></script> 
-    <script src="../../js/Bmi_chart.js"></script> 
-    <script src="../../js/common.js"></script>
+	<script>
+		$(function(){
+				$('#submit').on("click",function () {
+
+					var form1
+
+					console.log(form1);
+					
+					$.ajax({
+						type: "post",
+						url: "http://localhost:3000/write",
+						data: form1,
+						dataType: "json",
+						success:function(data) {
+							//정상 요청, 응답 시 처리 작업
+							console.log(JSON.stringify(data))
+						},
+						error:function(request,status,error) {
+							console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+						},
+						complete:function(data,textStatus) {
+							//작업 완료 후 처리
+						}
+					});
+	
+				});
+			});
+
+		function writeToServer() {
+
+		}
+	</script>
 </body>
 </html>
 
