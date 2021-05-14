@@ -99,9 +99,11 @@
                 },
                 error:function(request,status,error) {
                     console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+					alert('글이 등록되지 않았습니다');
                 },
-                complete:function to_ajax() {
+                complete:function() {
                     location.href = "list.html"
+					alert('글이 등록되었습니다');
                     //작업 완료 후 처리
                 }
             });
