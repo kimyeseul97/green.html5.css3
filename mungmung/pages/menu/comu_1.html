@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mung</title>
+<link rel="stylesheet" href="../../css/common.css">
+<!-- <link rel="stylesheet" href="../../css/main.css"> -->
+<link rel="stylesheet" href="../../library/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+
+<body>
+	<header>
+		<!-- 메뉴바 -->
+		<div class="gnb">
+            <div class="logo">
+                <a href="./index.html"><h2><i class="fas fa-paw"></i> mung <i class="fas fa-paw"></i></h2></a>
+            </div>
+			<!-- 모바일메뉴 -->
+			<div class="menu">
+				<div class="trigger">
+					<a href="#"><i class="fas fa-bars"></i></a>
+				</div>
+					<ul class="ham_box">
+						<li><a href="./pages/login/join.html">JOIN</a></li>
+						<li><a href="./pages/login/login.html">LOGIN</a></li>
+						<li class="exit">
+							<a href="#"><i class="far fa-times-circle" style="color: rgb(15, 15, 15); padding-left: 10px;"></i></a>
+						</li>
+					</ul>
+				</div>
+			<div>
+			<!-- pc메뉴 -->
+			<div class="nav_right">
+				<a href="#"><i class="fas fa-bars"></i></a>
+			</div>
+				<ul class="nav_box">
+					<li><a href="./pages/login/join.html">HOME</a></li>
+					<li><a href="./pages/login/login.html">멍INFO</a></li>
+					<li><a href="./pages/login/login.html">멍REVIEW</a></li>
+					<li><a href="./pages/login/login.html">멍TALK</a></li>
+					<li class="exit">
+						<a href="#"><i class="far fa-times-circle" style="color: rgb(15, 15, 15); padding-left: 10px;"></i></a>
+					</li>
+				</ul>
+				<ul class="nav">
+					<li><a href="./pages/login/join.html">JOIN</a></li>
+					<li><a href="./pages/login/login.html">LOGIN</a></li>
+				</ul>
+        </div>
+
+        <div id="container">
+            <h2>멍INFO</h2>
+            <h4>강아지 정보들을 영상으로 확인해 보세요</h4>
+        </div>
+        </br>
+            <h3 style="text-align: center; font-size: 25px; font-weight: lighter; padding-top:30px; padding-bottom: 30px;">Check my physical condition!</h3>
+        </br>
+    
+        <div class="content">
+			<!-- 리스트 게시판 시작-->
+
+<table class="sub_news" border="1" cellspacing="0" summary="게시판의 글제목 리스트">
+<caption>게시판 리스트</caption>
+<colgroup>
+<col>
+<col width="110">
+<col width="100">
+<col width="80">
+</colgroup>
+<thead>
+<tr>
+<th scope="col">제목</th>
+<th scope="col">글쓴이</th>
+<th scope="col">날짜</th>
+<th scope="col">조회수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="title">
+<a href="#">게시판 제목이 들어갑니다</a>
+<img width="13" height="12" class="pic" alt="첨부이미지" src="첨부파일 ic_pic.gif"> <a class="comment" href="#">[5]</a> <img width="10" height="9" class="new" alt="새글" src="첨부파일/ic_new.gif">
+</td>
+<td class="name">글쓴이이름</td>
+<td class="date">2008/02/14</td>
+<td class="hit">1234</td>
+</tr>
+<tr class="reply">
+<td class="title" style="padding-left:30px;">
+<a href="#">블로그 개편 답글</a>
+</td>
+<td class="name">벤쿠버지사</td>
+<td class="date">2008/02/14</td>
+<td class="hit">1234</td>
+</tr>
+
+<!-- tr이 제목 1줄입니다 보일 list 갯수만큼 li반복합니다.-->
+</tbody>
+</table>
+
+<!-- 리스트 게시판 끝-->
+        </div>
+
+        <footer class="footer">
+                <p>© 2021 Healthylife by kimyeseul</p>
+        </footer>
+
+
+	<!--js 파일-->
+	<script src="../../js/jquery-3.6.0.min.js"></script>
+    <!-- bmi 계산 js -->
+    <script src="../../js/bmi.js"></script> 
+
+    <!-- chart.js 라이브러리 이용  -->
+    <script src="../../js/chart.min.js"></script> 
+    <script src="../../js/Bmi_chart.js"></script> 
+    <script src="../../js/common.js"></script>
+</body>
+</html>
+
