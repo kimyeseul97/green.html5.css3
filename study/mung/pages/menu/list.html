@@ -50,28 +50,23 @@
         </div>
 
         <div id="container">
-            <h2>멍INFO</h2>
-            <h4>강아지 정보들을 영상으로 확인해 보세요</h4>
+            <h2>게시판List</h2>
         </div>
     
-    	<div class="contents">
+		
 <!-- 리스트 게시판 시작-->
-
-<caption>게시판 리스트</caption>
-<h2>게시글 리스트</h2>
-<table border='1'>
+<table>
 	<colgroup>
 		<col width='60'><col width='200'><col width='100'>
 	</colgroup>
 	<thead>
 		<tr>
-			<th>글번호</th>
-			<th>글제목</th>
-			<th>작성자</th>
+			<th name="id" id="id">글번호</th>
+			<th name="title" id="title">글제목</th>
+			<th name="content" id="content">작성자</th>
 		</tr>
 	</thead>
-</table boader='1'>
-<button onclick="location.href='../write'">글쓰기</button>
+</table>
 
 		<footer class="footer">
             <p>© 2021 Healthylife by kimyeseul</p>
@@ -79,13 +74,32 @@
 
 	<!--js 파일-->
 	<script src="../../js/jquery-3.6.0.min.js"></script>
-    <!-- bmi 계산 js -->
-    <script src="../../js/bmi.js"></script> 
-
-    <!-- chart.js 라이브러리 이용  -->
-    <script src="../../js/chart.min.js"></script> 
-    <script src="../../js/Bmi_chart.js"></script> 
     <script src="../../js/common.js"></script>
+	
+	<script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function to_ajax(){
+            var queryString = $("form[name=testForm]").serialize();
+            $.ajax({
+                type: "get",
+                url: "http://localhost:3000/list",
+                dataType: "json",
+                data: queryString,
+                success:function(data) {
+                    //정상 요청, 응답 시 처리 작업
+                    console.log(JSON.stringify(data));
+                },
+                error:function(request,status,error) {
+                    console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                },
+                complete:function to_ajax() {
+                    location.href = "list.html"
+                    //작업 완료 후 처리
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>
 

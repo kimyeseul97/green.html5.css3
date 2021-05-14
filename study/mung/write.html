@@ -52,70 +52,35 @@
         <div id="container">
             <h2>게시글 작성</h2>
         </div>
-    
-
-<div class="contents">
-<form id='form' method='post' accept-charset="utf-8">
-	<table class = "table2">
-		<tr>
-		<td>작성자</td>
-		<td><input type = text name = name size=60> </td>
-		</tr>
-		<tr>
-		<td>제목</td>
-		<td><input type = text name = title size=60></td>
-		</tr>
-		<tr>
-		<td>내용</td>
-		<td><textarea name = content cols=85 rows=15 ></textarea></td>
-		</tr>
-		</td>
-		</tr>
-	</table>
-	<button class="btn" type="submit" >write</button>
-</form>
-</div>
-
-		<footer class="footer">
-            <p>© 2021 Mung by kimyeseul</p>
-        </footer>
-
-	<!--js 파일-->
-	<script src="../../js/jquery-3.6.0.min.js"></script>
-	<script src="../../js/common.js"></script>
-
-	<script>
-		$(function(){
-				$('#submit').on("click",function () {
-
-					var form1
-
-					console.log(form1);
-					
-					$.ajax({
-						type: "POST",
-						url: "http://localhost:3000/write",
-						data: form1,
-						dataType: "json",
-						success:function(data) {
-							//정상 요청, 응답 시 처리 작업
-							console.log(JSON.stringify(data))
-						},
-						error:function(request,status,error) {
-							console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-						},
-						complete:function(data,textStatus) {
-							//작업 완료 후 처리
-						}
-					});
-	
-				});
-			});
-
-		function writeToServer() {
-
-		}
-	</script>
+    <div
+    <form name="testForm" id="testForm">
+        <input type="text" name="id" id="id"/>
+        <input type="text" name="title" id="title"/>
+        <input type="text" name="content" id="content"/>
+        <input type="button" value="확인" onclick="to_ajax(); return false">
+    </form>
+<script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function to_ajax(){
+            var queryString = $("form[name=testForm]").serialize();
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:3000/writeAf",
+                dataType: "json",
+                data: queryString,
+                success:function(data) {
+                    //정상 요청, 응답 시 처리 작업
+                    console.log(JSON.stringify(data));
+                },
+                error:function(request,status,error) {
+                    console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                },
+                complete:function to_ajax() {
+                    location.href = "./pages/menu/list.html"
+                    //작업 완료 후 처리
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-

@@ -39,7 +39,7 @@ textarea{
     height: 400px;
 }
 
-.btn{
+button{
     width:200px;
     background-color: #e2e2e2;
     border: none;
@@ -55,6 +55,6 @@ textarea{
     margin-left: 50%;
 }
 
-.btn:hover{
+button:hover{
     background-color: rgb(212, 212, 212);
 }
