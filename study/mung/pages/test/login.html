@@ -41,15 +41,7 @@
     
         <div class="container">
             <div class="login_container">
-                <!-- 오른쪽부분 -->
-                <div class="login_right">
-                    <div class="top_logo">
-                    </div>
-                    <h1>Login</h1>
-                    <p>welcome</p>
-                </div>
-                <!-- 왼쪽부분 -->
-                <div class="login_left">
+                <div class="login_left">      
                     <div class="login_input_container">
                         <div class="login_input_wrap">
                             <i class="far fa-envelope"></i>
@@ -61,7 +53,6 @@
                         </div>
                     </div>
 
-                   
                     <div class="login-btn-wrap">
                         <a href="#"><button class="login-btn">log in</button></a>
                     </div>
@@ -77,49 +68,38 @@
 			<p>© 2021 Healthylife by kimyeseul</p>
 		</footer>
 
-
-<!-- 카카오 연동 로그인 -->
-    <script type='text/javascript'>
-            //<![CDATA[
-           // 사용할 앱의 JavaScript 키를 설정해 주세요.
-           Kakao.init('e3aaa61ff244ea2fcdf3b04a2c799db6');
-           console.log("Kakao.isInitialized()", Kakao.isInitialized());
-
-Kakao.Auth.createLoginButton({
-	container: '#kakao-login-btn',
-	success: function(response) {
-		Kakao.API.request({
-			url: '/v2/user/me',
-			success: function(response) {
-				var userID = response.id;
-				var useEmail = response.kakao_account.email;
-				var useNickName = response.properties.nickname;
-				
-				console.log("userID", userID);
-				console.log("useEmail", useEmail);
-				console.log("useNickName", useNickName);
-				
-			},
-			fail: function(error) {
-				console.log("request fail", error);
-			}
-		});
-		
-	},
-	fail: function(error) {
-		console.log("fail", error);
-	},
-});
-
-
-        
-
-    </script>
-
 	<!--js 파일-->
 	<script src="../../js/jquery-3.6.0.min.js"></script>
 	<script src="../../js/login.js"></script>
 	<script src="../../js/common.js"></script>
+
+    <!-- 카카오 스크립트 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+    Kakao.init('e3aaa61ff244ea2fcdf3b04a2c799db6');
+    Kakao.Auth.createLoginButton({ 
+        container: '#kakao-login-btn', 
+        success: function(authObj) { 
+            Kakao.API.request({ 
+                url: '/v2/user/me',
+                success: function(res) {
+                        alert('성공');
+                        location.href = "logout.html"
+                    }
+                    })
+                },
+                fail: function(error) {
+                        alert('실패');
+                        location.href = "login.html"
+                }
+      });
+
+
+</script>
+</script>
+</body>
+</html>
+
 </body>
 </html>
 

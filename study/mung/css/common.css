@@ -19,7 +19,6 @@
 }
 
 .gnb .logo  {
-    /* width: 100px; */
     align-items: center;
     text-align: center;
     display: block;
@@ -42,11 +41,7 @@
 
 .gnb ul {
     overflow: hidden;
-    /* float: right; */
     padding-bottom: 20px;
-    /* nav바 메뉴영역 */
-    /* width: calc(100% - 217px);
-    padding-right: 15px; */
 }
 
 .gnb .nav li {
@@ -101,39 +96,15 @@
     font-size: 30px;
 }
 
+
+/* 메뉴선택시 색변경 */
 .nav_box li :hover {
     color: rgb(206, 206, 206);
 }
 
-/* 모바일 메뉴바 */
-.menu .trigger a {
-    color: rgb(255, 255, 255);
-    float: right;
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
-}
-
-/* 햄버거바 메뉴 박스 */
-.menu .ham_box {
-    position:fixed;
-    top:70px;
-    right:0;
-    width:130px;
-    height:180px;
-    background-color:#ffe1e1;
-    padding-top:5px;
-    z-index: 1;
-    opacity: 0.5;
-    display: none;
-}
-.menu .ham_box li a {
-    color: rgb(143, 143, 143);
-    font-size: 17px;
-    text-align: right;
-    font-weight: bold;
-    display: block;
-}
+.nav li :hover {
+    color: gray;
+} 
 
 
 
@@ -166,41 +137,47 @@
     background-color: rgb(231, 231, 231);
     width: 100%;
     height: 110px;
-    /* position: relative; */
   }
   
   .footer p{
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     padding-top: 40px;
+    font-weight: bold;
   }
 
 
  /* 스마트폰 */
 @media screen and (max-width: 540px) {
-    /* .gnb, #container{
-        width:auto;
-        height: auto;
-    } */
+    .gnb{
+        width: auto;
+    }
     #container h2 {
         font-size: 45px;
     }
-
-    .gnb ul > li {
-        padding: 3px 8px;
+    /* 로그인 회원가입 */
+    .gnb .nav li a  {
+        font-size: 14px;
+        font-weight: bold;
     }
-    .gnb ul > li a  {
-        font-size: 12px;
-        /* color: black; */
+    /* 로고 크기 */
+    .gnb .logo a h2 {
+        font-size: 32px;
     }
-    .gnb .logo h2{
-        font-size: 10px;
-     } 
-    .gnb .nav {
-        display: none;
+    /* 메뉴*/
+    .nav_right a i {
+        font-size: 25px;
+        top: 85px;
     }
-    .menu .trigger a{ 
-        float: right;
+    .nav_box {
+        width: 180px;
+        height: 100%;
+    }
+    .nav_box li {
+        font-size: 18px;
+    }
+    .nav_box .exit a i {
+        font-size: 20px;
     }
 }
 
@@ -209,11 +186,11 @@
 /* 태블릿 */
   @media screen and (min-width:541px) {
     .gnb{
-        position: relative;
         width:auto;
     }
-    .menu .trigger a { 
-        display: none;
+
+    .nav li {
+        font-size: 10px;
     }
   } 
 

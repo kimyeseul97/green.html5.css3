@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mung</title>
 <link rel="stylesheet" href="../../css/common.css">
-<link rel="stylesheet" href="../../css/list.css">
-<link rel="stylesheet" href="../../css/write.cs패">
+<link rel="stylesheet" href="../../css/write.css">
 <link rel="stylesheet" href="../../library/fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
 
@@ -37,26 +36,41 @@
         </div>
 
         <div id="container">
-            <h2>게시판List</h2>
+            <h2>글상세보기</h2>
         </div>
     
 		
 <!-- 리스트 게시판 시작-->
-<table>
-	<colgroup>
-		<col width='60'><col width='200'><col width='100'>
-	</colgroup>
-	<thead>
-		<tr>
-			<th name="id" id="id">글번호</th>
-			<th name="title" id="title">글제목</th>
-			<th name="content" id="content">작성자</th>
-		</tr>
-	</thead>
+<table class="table table-bordered">
+	<tbody>
+		<form action="updateTest.do" id="viewForm" method="post"
+			encType="multipart/form-data">
+			<tr>
+				<th>글번호:</th>
+				<td><input name="testId" id="testId" type="text" value="${result.testId}"
+					class="form-control" readonly /></td>
+
+			</tr>
+			<tr>
+				<th>제목:</th>
+				<td><input type="text" value="${result.testTitle}"
+					id="testTitle" class="form-control" /></td>
+			</tr>
+			<tr>
+				<th>내용:</th>
+				<td><textarea id="testContent" class="form-control"
+						style="height: 200px;">${result.testContent}</textarea></td>
+			</tr>
+			<tr>
+				<button id="btn_delete" type="button" class="btn_previous">삭제</button>
+				<button id="btn_modify" type="button" class="btn_register">수정</button>
+			</tr>
+		</form>
+	</tbody>
 </table>
 
 		<footer class="footer">
-            <p>© 2021 Healthylife by kimyeseul</p>
+            <p>© 2021 Mung by kimyeseul</p>
         </footer>
 
 	<!--js 파일-->
@@ -65,9 +79,32 @@
 	
 	<script src="js/jquery-3.6.0.min.js"></script>
     <script>
-        function to_ajax(){
-            var queryString = $("form[name=testForm]").serialize();
-            $.ajax({
+
+	const testId = $("#testId").val();
+	$(document).on('click', '#btn_modify', function(e) {
+		if (confirm("정말 수정하시겠습니까 ?") == true) {
+			
+			//데이터를 담아내는 부분
+			const testTitle = $("#testTitle").val().trim();
+			const testContent = $("#testContent").val().trim();
+			const uploadFile = $("#uploadFile")[0].files[0];
+
+			if(testTitle === ''){
+				alert('제목을 입력해주세요.');
+				return;
+			}
+			
+			if(testContent === ''){
+				alert('내용을 입력해주세요.');
+				return;
+			}
+
+			var formData = new FormData();
+			formData.append("testId",testId);
+			formData.append("testTitle",testTitle);
+			formData.append("testContent",testContent);
+
+			$.ajax({
                 type: "get",
                 url: "http://localhost:3000/list",
                 dataType: "json",
@@ -83,8 +120,29 @@
                     location.href = "list.html"
                     //작업 완료 후 처리
                 }
-            });
-        }
+
+			})			
+		} 
+	});
+
+	// 삭제부분
+	$(document).on('click', '#btn_delete', function(e) {
+		if (confirm("정말 삭제하시겠습니까 ?")) {
+			$.ajax({
+				url : "http://localhost:3000/delete",
+				type : "POST",
+				data : {
+					testId : testId
+				},
+				success : function(res){
+					alert('삭제 완료');
+					location.href='list.html';
+				}
+			})
+		}
+	});
+		
+
     </script>
 
 </body>
