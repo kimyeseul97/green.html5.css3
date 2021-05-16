@@ -67,32 +67,30 @@
 
 	<!--js 파일-->
 	<script src="../../js/jquery-3.6.0.min.js"></script>
-    <script src="../../js/common.js"></script>
-	
+    <script src="../../js/common.js"></script>	
 	<script src="js/jquery-3.6.0.min.js"></script>
+
     <script>
 	function showDetail(testId) {
+		var form = document.getElementById("boardForm");
+		var url = "<c:url value='/testDetail.do'/>";
+		url = url + "?testId=" + testId;
 
-	var form = document.getElementById("boardForm");
-	var url = "<c:url value='/testDetail.do'/>";
-	url = url + "?testId=" + testId;
-
-	form.action = url;
-	form.submit();
+		form.action = url;
+		form.submit();
 	}
 
-	//글 작성 버튼 클릭 시 testRegister로 이동
-	$("#btn_write").click(function javascript_onclikc() {
-	$(location).attr('href', 'testRegister.do');
+	//글 작성 버튼 클릭 시 wirte페이지로 이동
+	$("#btn_write").click(function javascript_onclikc(){
+		$(location).attr('href', 'write.html');
 	});
-
 		function getPage(page) {
         var queryString = $("form[name=boardform]").serialize();
 				$.ajax({
 					   type: "get",
                 	   url: "http://localhost:3000/list",
 					   data: queryString,
-						
+
 					   success : function(data) {
 						const list = res['list'];
 						var data = "";
@@ -105,7 +103,7 @@
 									+ list[i]['testId'] + ")'>";
 							data += "<td>" + list[i]['testId'] + "</td>";
 							data += "<td>" + list[i]['testTitle'] + "</td>";
-							data += "<td>" + list[i]['testName'] + "</td>";
+							// data += "<td>" + list[i]['testName'] + "</td>";
 							data += "<td>" + list[i]['testDate'] + "</td>";
 							data += "</tr>";
 						}
