@@ -68,7 +68,7 @@
 	<!--js 파일-->
 	<script src="../../js/jquery-3.6.0.min.js"></script>
     <script src="../../js/common.js"></script>	
-	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="../../js/jquery-3.6.0.min.js"></script>
 
     <script>
 	function showDetail(testId) {
@@ -91,22 +91,26 @@
                 	   url: "http://localhost:3000/list",
 					   data: queryString,
 
+						error : function(){
+							alert('실패');
+						},
+
 					   success : function(data) {
 						const list = res['list'];
 						var data = "";
 						var block = "";
 
 						console.log(JSON.stringify(data));
-						// 테이블의 row를 삽입하는 부분
-						for (var i = 0; i < list.length; i++) {
-							data += "<tr style='cursor:pointer' onclick='showDetail("
-									+ list[i]['testId'] + ")'>";
-							data += "<td>" + list[i]['testId'] + "</td>";
-							data += "<td>" + list[i]['testTitle'] + "</td>";
-							// data += "<td>" + list[i]['testName'] + "</td>";
-							data += "<td>" + list[i]['testDate'] + "</td>";
-							data += "</tr>";
-						}
+						// 테이블의 row를 삽입하는 부패
+							for (var i = 0; i < list.length; i++) {
+								data += "<tr style='cursor:pointer' onclick='showDetail("
+										+ list[i]['testId'] + ")'>";
+								data += "<td>" + list[i]['testId'] + "</td>";
+								data += "<td>" + list[i]['testTitle'] + "</td>";
+								// data += "<td>" + list[i]['testName'] + "</td>";
+								data += "<td>" + list[i]['testDate'] + "</td>";
+								data += "</tr>";
+							}
 						$("#dataSection").html(data);
 					}
             });
