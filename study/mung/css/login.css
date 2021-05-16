@@ -77,6 +77,11 @@ h3 {
     text-align: center;
 }
 
+#naver_id_login {
+    margin-top: 10px;
+    text-align: center;
+}
+
 /* 스마트폰 */
 /* 창크기 최대 680이하일떄 */
 @media screen and (max-width:680px) {

@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="../../css/login.css">
 <link rel="stylesheet" href="../../library/fontawesome-free-5.15.3-web/css/all.min.css">
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<scrip src="https://developers.kakao.com/sdk/js/kakao.js"></scrip>
+<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
 </head>
 <body>
 	<header>
@@ -67,6 +69,9 @@
 
                     <div id="kakao-login-btn"></div>
                     <!-- <a href="http://developers.kakao.com/login"></a> -->
+                    <!-- 네이버아이디로로그인 버튼 노출 영역 -->
+                    <div id="naver_id_login"></div>
+
                 </div>
             </div> 
             <!-- content-->
@@ -80,11 +85,11 @@
 	<!--js 파일-->
 	<script src="../../js/jquery-3.6.0.min.js"></script>
 	<script src="../../js/login.js"></script>
-	<script src="../../js/common.js"></script>
+	<scrip src="../../js/common.js"></script>
 
-    <!-- 카카오 스크립트 -->
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
     <script>
+    // 카카오 로그인
     Kakao.init('e3aaa61ff244ea2fcdf3b04a2c799db6');
     Kakao.Auth.createLoginButton({ 
         container: '#kakao-login-btn', 
@@ -103,12 +108,17 @@
                 }
       });
 
+    // 네이버 로그인
+  	var naver_id_login = new naver_id_login("PpzZoUWfaW9ytMWua_3P", "http://127.0.0.1:5501/study/mung/pages/login/logout.html");
+  	var state = naver_id_login.getUniqState();
 
+        naver_id_login.setButton("white", 3,55);
+        naver_id_login.setDomain("http://127.0.0.1:5501/");
+        naver_id_login.setState(state);
+        naver_id_login.setPopup();
+        naver_id_login.init_naver_id_login();
+  
 </script>
-</script>
-</body>
-</html>
-
 </body>
 </html>
 
