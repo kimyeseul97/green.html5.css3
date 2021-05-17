@@ -1,3 +1,8 @@
+table{
+  margin-top: 20px;
+  width: auto;
+}
+
 th {
     width: 150px;
     padding: 10px;
@@ -5,12 +10,30 @@ th {
     vertical-align: top;
     border-bottom: 1px solid #ccc;
   }
+
 td {
     width: 350px;
     padding: 10px;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
   }
+
+tr{
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+
+#table_top{
+  font-size: 23px;
+  color: rgb(83, 83, 83);
+}
+#table_contetns{
+  font-size: 18px;
+  color: gray;
+}
+ 
 
 button {
     width:200px;
@@ -28,6 +51,7 @@ button {
     margin-left: 45%;
 }
 
+/
 button:hover{
     background-color: rgb(212, 212, 212);
 }
