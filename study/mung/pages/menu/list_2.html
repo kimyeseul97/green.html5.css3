@@ -37,7 +37,7 @@
         </div>
 
         <div id="container">
-            <h2>Mung-Review</h2>
+            <h2>Mung-talk</h2>
         </div>
     
 		
@@ -53,7 +53,6 @@
 			<th name="date" id="date">날짜</th>
 		</tr>
 		<tr id="table_contetns" style="text-align: center;">
-			<td class="num"></td> 
 			<td class="name"></td> 
 			<!-- <p class="content"></p> -->
 			<!-- 제목 클릭시 상세게시판 이동 -->
@@ -73,16 +72,16 @@
 
 	<!--js 파일-->
 	<script src="../../js/jquery-3.6.0.min.js"></script>
-    <!-- <script src="../../js/common.js"></script> -->/
+    <script src="../../js/common.js"></script>
 	
     <script>
 	$("#btn_write").click(function javascript_onclikc(){
-		$(location).attr('href', 'write.html');
+		$(location).attr('href', 'write_2.html');
 	});
 
             $.ajax({
                 type: "get",
-                url: "http://localhost:3000/list",
+                url: "http://localhost:3000/list_2",
                 dataType: "json",
                 // data: queryString,
                 success:function(data) {
@@ -93,24 +92,21 @@
 
 					for(var i=0; i < result.length; i++) {
 
-						console.log(result[i].ID);
-						console.log(result[i].TITLE);
-						console.log(result[i].CONTENT);
-						console.log(result[i].WDATE);
+						console.log(result[i].id);
+						console.log(result[i].title);
+						console.log(result[i].content);
+						console.log(result[i].wdate);
 
-						$(".name").append(result[i].ID+"<br>");
-						$(".title").append(result[i].TITLE+"<br>");
-						$(".content").append(result[i].CONTENT+"<br>");
-						$(".wdate").append(result[i].WDATE+"<br>");
+						$(".name").append(result[i].id+"<br>");
+						$(".title").append(result[i].title+"<br>");
+						$(".content").append(result[i].content+"<br>");
+						$(".wdate").append(result[i].wdate+"<br>");
 					} 
 				},
                 error:function(request,status,error) {
                     console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
                 },
-                complete:function() {
-                    //location.href = "list.html"
-                    //작업 완료 후 처리
-                }
+
             });
     </script>
 

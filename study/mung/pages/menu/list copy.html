@@ -53,7 +53,6 @@
 			<th name="date" id="date">날짜</th>
 		</tr>
 		<tr id="table_contetns" style="text-align: center;">
-			<td class="num"></td> 
 			<td class="name"></td> 
 			<!-- <p class="content"></p> -->
 			<!-- 제목 클릭시 상세게시판 이동 -->
@@ -73,7 +72,7 @@
 
 	<!--js 파일-->
 	<script src="../../js/jquery-3.6.0.min.js"></script>
-    <!-- <script src="../../js/common.js"></script> -->/
+    <!-- <script src="../../js/common.js"></script> -->
 	
     <script>
 	$("#btn_write").click(function javascript_onclikc(){
@@ -102,7 +101,8 @@
 						$(".title").append(result[i].TITLE+"<br>");
 						$(".content").append(result[i].CONTENT+"<br>");
 						$(".wdate").append(result[i].WDATE+"<br>");
-					} 
+					}
+				} 
 				},
                 error:function(request,status,error) {
                     console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);

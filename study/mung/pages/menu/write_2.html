@@ -59,7 +59,7 @@
 			</td>
 			</tr>
 		</table>
-		<input type="button" value="글쓰기" button onclick="to_ajax(); return false">
+		<input type="button" value="글쓰기" button onclick="to_ajax_2(); return false">
 	</form>
 	</div>
 
@@ -86,11 +86,11 @@
 	<script src="../../js/jquery-3.6.0.min.js"></script>
 	<script src="../../js/common.js"></script>
     <script>
-        function to_ajax(){
+        function to_ajax_2(){
             var queryString = $("form[name=testForm]").serialize();
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/writeAf",
+                url: "http://localhost:3000/write",
                 dataType: "json",
                 data: queryString,
                 success:function(data) {
@@ -104,7 +104,7 @@
                 complete:function() {
 					//작업 완료 후 처리
 					alert('게시글 등록 완료');
-                    location.href = "list.html"
+                    location.href = "list_2.html"
                 }
             });
         }
